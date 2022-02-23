@@ -50,21 +50,21 @@ function createNav() {
 }
 
 //activating sections
-
-function sectionActivation() {
+window.addEventListener("scroll", function() {
   for (let section of sections) {
-    //using getBoundingClientRect (built in function) to get the viewport
-    if (section.getBoundingClientRect().top >= 0 && !section.classList.contains('your-active-class')) {
-      section.classList.add('your-active-class');
-    }else if (section.getBoundingClientRect().top < 0  && section.classList.contains('your-active-class')){
-      section.classList.remove('your-active-class');
-    }
+    window.addEventListener("scroll", function () {
+      if (section.getBoundingClientRect().top < window.innerHeight && !section.classList.contains("your-active-class")) {
+        section.classList.add("your-active-class");
+      }else {
+        section.classList.remove("your-active-class")
+      }
+    })
   }
-}
+})
 
 //Calling functions in the right order
 createNav();
-sectionActivation();
+
 
 
 
