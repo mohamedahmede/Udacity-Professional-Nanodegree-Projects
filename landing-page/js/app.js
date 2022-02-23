@@ -52,13 +52,12 @@ function createNav() {
 //activating sections
 window.addEventListener("scroll", function() {
   for (let section of sections) {
-    window.addEventListener("scroll", function () {
       if (section.getBoundingClientRect().top < window.innerHeight && !section.classList.contains("your-active-class")) {
         section.classList.add("your-active-class");
       }else {
         section.classList.remove("your-active-class")
       }
-    })
+    
   }
 })
 
