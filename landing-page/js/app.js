@@ -65,8 +65,3 @@ window.addEventListener("scroll", function() {
 //Calling functions in the right order
 createNav();
 
-
-
-
-// Add class 'active' to section when near top of viewport
-// Set sections as active
